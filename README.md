@@ -18,4 +18,5 @@ Combine permissions with authentication for a more secure API.
 When designing permissions, follow the principle of least privilege: users should only access what's necessary for their role.
 
 
-Also Added Session and token authentication
+Also Added Session and token authentication.
+And added user registration, log in log out endpoints.
