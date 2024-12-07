@@ -15,3 +15,14 @@ A **Blog API** built with Django and Django REST Framework (DRF), showcasing ful
 - **Best Practices**: Combines permissions with authentication to adhere to the principle of least privilege.
 
 ---
+## Highlights
+
+-- **Custom Permissions**: IsAuthorOrReadOnly
+```python
+from rest_framework.permissions import BasePermission
+
+class IsAuthorOrReadOnly(BasePermission):
+    def has_object_permission(self, request, view, obj):
+        if request.method in SAFE_METHODS:
+            return True
+        return obj.author == request.user
