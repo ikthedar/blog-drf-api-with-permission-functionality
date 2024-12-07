@@ -1,22 +1,16 @@
-A Blog API using the full set of Django REST Framework features.
+Blog API
+A fully-featured Blog API built with Django and Django REST Framework (DRF). This API supports user authentication, permissions, and CRUD functionality for blog posts. It is designed with best practices in mind, combining authentication and permissions for a secure and robust implementation.
 
-It will have users, permissions, and allow for full CRUD (Create-Read-Update-Delete)
-functionality. Also exploring viewsets, routers, and documentation.
-
-Create a directory for this project called blogapi. 
-Then install Django in a new virtual environment create a new Django project (blog_project) and app for blog entries (posts).
-
-
-We can view Post Detail page since read-only permissions are allowed. However we can not make any PUT or DELETE requests due to our custom IsAuthorOrReadOnly permission class.
-
-Note that the generic views will only check the object-level permissions for views that retrieve a single model instance. If you require object-level filtering of list views–for a collection of instances–you’ll need to filter by overriding the initial queryset.
-
-
-Best Practices:
-
-Combine permissions with authentication for a more secure API.
-When designing permissions, follow the principle of least privilege: users should only access what's necessary for their role.
-
-
-Also Added Session and token authentication.
-And added user registration, log in log out endpoints.
+Features
+CRUD Functionality: Full Create, Read, Update, Delete operations for blog posts.
+User Authentication: Supports session-based and token-based authentication.
+Permissions: Implements a custom permission class (IsAuthorOrReadOnly) to allow:
+Read-only access for all users.
+Write, Update, and Delete permissions only for the author of the post.
+Generic Views: Uses DRF's generic views for streamlined functionality.
+Object-level Permissions: Ensures individual resource access control.
+User Endpoints:
+Registration
+Login
+Logout
+Documentation: API endpoints are documented for ease of use.
