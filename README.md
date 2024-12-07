@@ -1,16 +1,11 @@
-Blog API
-A fully-featured Blog API built with Django and Django REST Framework (DRF). This API supports user authentication, permissions, and CRUD functionality for blog posts. It is designed with best practices in mind, combining authentication and permissions for a secure and robust implementation.
+Blog API Project
+A Blog API built with Django and Django REST Framework (DRF), showcasing full CRUD functionality, user authentication, custom permissions, and a clean architecture. This project includes best practices and is designed to be beginner-friendly yet robust enough for production-level exploration.
 
 Features
-CRUD Functionality: Full Create, Read, Update, Delete operations for blog posts.
-User Authentication: Supports session-based and token-based authentication.
-Permissions: Implements a custom permission class (IsAuthorOrReadOnly) to allow:
-Read-only access for all users.
-Write, Update, and Delete permissions only for the author of the post.
-Generic Views: Uses DRF's generic views for streamlined functionality.
-Object-level Permissions: Ensures individual resource access control.
-User Endpoints:
-Registration
-Login
-Logout
-Documentation: API endpoints are documented for ease of use.
+CRUD Functionality: Full Create-Read-Update-Delete operations for blog posts.
+Custom Permissions: IsAuthorOrReadOnly permission class to allow only authors to modify their posts while others have read-only access.
+User Management: User registration, login, and logout endpoints.
+Authentication: Session and token-based authentication for secure access.
+Viewsets & Routers: Simplified URL routing with DRF's ViewSet and Router capabilities.
+Object-Level Permissions: Ensures granular control over data access.
+Best Practices: Combines permissions with authentication to adhere to the principle of least privilege.
