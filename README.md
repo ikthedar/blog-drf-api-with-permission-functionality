@@ -17,7 +17,7 @@ A **Blog API** built with Django and Django REST Framework (DRF), showcasing ful
 ---
 ## Highlights
 
--- **Custom Permissions**: IsAuthorOrReadOnly
+- **Custom Permissions**: IsAuthorOrReadOnly
 ```python
 from rest_framework.permissions import BasePermission
 
@@ -27,7 +27,7 @@ class IsAuthorOrReadOnly(BasePermission):
             return True
         return obj.author == request.user
 ```
--- **ViewSets and Routers**:
+- **ViewSets and Routers**:
 ```python
 from rest_framework.routers import DefaultRouter
 from posts.views import PostViewSet
@@ -43,6 +43,6 @@ urlpatterns = [
 ```
 
 ## Best Practices
--- **Authentication & Authorization**: DRF has built in basic and session authentication. Apart from that, I combined session and token authentication for flexibility. 
--- **Principle of Least Privilege**: Users should only access resources necessary for their role.
--- **Secure Endpoints**: I used DRF’s permissions module to restrict access.
+- **Authentication & Authorization**: DRF has built in basic and session authentication. Apart from that, I combined session and token authentication for flexibility. 
+- **Principle of Least Privilege**: Users should only access resources necessary for their role.
+- **Secure Endpoints**: I used DRF’s permissions module to restrict access.
