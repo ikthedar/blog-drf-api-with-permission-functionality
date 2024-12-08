@@ -1,4 +1,4 @@
-# Blog API Project
+# Blog API with Advanced Authentication and Authorization Using DRF
 
 A **Blog API** built with Django and Django REST Framework (DRF), showcasing full CRUD functionality, user authentication, custom permissions, and a clean architecture. This project includes best practices and is designed to be beginner-friendly yet robust enough for production-level exploration.
 
