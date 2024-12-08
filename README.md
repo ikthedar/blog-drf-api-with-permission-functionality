@@ -29,4 +29,20 @@ class IsAuthorOrReadOnly(BasePermission):
 ```
 -- **ViewSets and Routers**:
 ```python
+from rest_framework.routers import DefaultRouter
+from posts.views import PostViewSet
 
+router = DefaultRouter()
+router.register(r'posts', PostViewSet)
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('api-auth/', include('rest_framework.urls')),
+    path('', include(router.urls)),
+]
+```
+
+## Best Practices
+Authentication & Authorization: DRF has built in basic and session authentication. Apart from that, I combined session and token authentication for flexibility. 
+Principle of Least Privilege: Users should only access resources necessary for their role.
+Secure Endpoints: Use DRF’s permissions module to restrict access.
